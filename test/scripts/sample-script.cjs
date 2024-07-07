@@ -3,7 +3,7 @@ const hre = require("hardhat");
 async function main() {
   
   const [deployer] = await hre.ethers.getSigners();
-  const FiredGuys = await hre.ethers.getContractFactory("MyToken");
+  const FiredGuys = await hre.ethers.getContractFactory("FiredGuys");
   const firedGuys = await FiredGuys.deploy(deployer.address);
 
   console.log("My NFT deployed to:", firedGuys.address);

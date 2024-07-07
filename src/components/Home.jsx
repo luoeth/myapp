@@ -2,9 +2,9 @@ import WalletBalance from './WalletBalance';
 import { useEffect, useState } from 'react';
 
 import { ethers } from 'ethers';
-import FiredGuys from '../artifacts/contracts/MyNFT.sol/MyNFT.json';
+import FiredGuys from '../artifacts/contracts/MyNFT.sol/FiredGuys.json';
 
-const contractAddress = 'YOUR_DEPLOYED_CONTRACT_ADDRESS';
+const contractAddress = '0x5fbdb2315678afecb367f032d93f642f64180aa3';
 
 const provider = new ethers.providers.Web3Provider(window.ethereum);
 
@@ -32,13 +32,15 @@ function Home() {
     <div>
         <WalletBalance />
 
-        {Array(totalMinted + 1)
+        {/* {Array(totalMinted + 1)
         .fill(0)
         .map((_, i) => (
             <div key={i}>
             <NFTImage tokenId={i} getCount={getCount} />
             </div>
-        ))}
+        ))} */}
     </div>
   );
 }
+
+export default Home;
